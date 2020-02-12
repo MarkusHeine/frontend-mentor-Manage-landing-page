@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    width: 100vw;
+    max-width: 100vw;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url("../assets/images/backgrounds/bg-simplify-section-desktop.svg");
+    background-size: 100%;
+    background-repeat: repeat-x;
+    overflow-x: hidden;
+    font-family: "Be Vietnam", sans-serif; /* box-sizing: border-box; */
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header > .nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+header > .main {
+    background-color: transparent;
+    width: inherit;
+}
