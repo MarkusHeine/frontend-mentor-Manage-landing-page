@@ -1,3 +1,5 @@
 .DS_Store
 design
 style-guide.md
+node_modules
+dist
