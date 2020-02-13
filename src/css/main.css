@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     min-height: 100vh;
-    margin: 6vh 0;
+    margin: 4vh 0;
     background-color: hsl(0, 0%, 98%);
     background-image: url("../assets/images/backgrounds/bg-simplify-section-desktop.svg");
     background-size: cover;
@@ -58,11 +58,24 @@ body {
 
 button {
     font-family: "Be Vietnam", sans-serif;
-    font-size: 1.1em;
+    font-size: 0.7rem;
     -webkit-box-shadow: 0px 29px 25px -17px rgba(242, 95, 58, 0.51);
     -moz-box-shadow: 0px 29px 25px -17px rgba(242, 95, 58, 0.51);
     box-shadow: 0px 29px 25px -17px rgba(242, 95, 58, 0.51);
     cursor: pointer;
+    width: fit-content;
+}
+
+p {
+    font-size: 1.1em;
+    color: hsl(227, 12%, 61%);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3em;
+    color: hsl(228, 39%, 23%);
+    line-height: 1.3;
 }
 
 .elem-shape {
@@ -94,6 +107,8 @@ a:hover {
 }
 
 /* HEADER */
+
+/* NAVIGATION */
 
 header {
     width: 88%;
@@ -165,17 +180,78 @@ header {
     height: 25px;
 }
 
-header > .main {
-    background-color: transparent;
-    width: inherit;
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 88%;
+    margin-top: 9vh;
+}
+
+#about {
+    margin-bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#teaser {
+    width: 40%;
+    padding: 30px;
+}
+
+#teaser p {
+    width: 60%;
+}
+
+#chart {
+    width: 40%;
+    padding: 30px;
+}
+
+#chart img {
+    width: 100%;
 }
 
 @media screen and (max-width: 375px) {
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+
     .nav-desktop {
         display: none;
     }
 
     .nav-mobile {
         display: flex;
+    }
+
+    #about {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    #teaser {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #teaser p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #chart {
+        width: 100%;
+        padding: 0;
     }
 }

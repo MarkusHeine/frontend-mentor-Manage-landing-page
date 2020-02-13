@@ -1,1 +1,3 @@
-console.log("hello from index js");
+import { mobileNavigation } from "./mobileNavigation";
+
+mobileNavigation();
