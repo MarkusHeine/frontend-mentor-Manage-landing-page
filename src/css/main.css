@@ -1,16 +1,59 @@
 body {
     width: 100vw;
+    min-height: 100vh;
     margin: 6vh 0;
     background-color: hsl(0, 0%, 98%);
     background-image: url("../assets/images/backgrounds/bg-simplify-section-desktop.svg");
-    background-size: 100%;
+    background-size: cover;
     background-repeat: repeat-x;
     overflow-x: hidden;
     font-family: "Be Vietnam", sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+.body-bg-mobile {
+    background: rgba(255, 255, 255, 0);
+    background: -moz-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.29) 38%,
+        rgba(97, 97, 97, 0.75) 100%
+    );
+    background: -webkit-gradient(
+        left top,
+        left bottom,
+        color-stop(0%, rgba(255, 255, 255, 0)),
+        color-stop(38%, rgba(0, 0, 0, 0.29)),
+        color-stop(100%, rgba(97, 97, 97, 0.75))
+    );
+    background: -webkit-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.29) 38%,
+        rgba(97, 97, 97, 0.75) 100%
+    );
+    background: -o-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.29) 38%,
+        rgba(97, 97, 97, 0.75) 100%
+    );
+    background: -ms-linear-gradient(
+        top,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.29) 38%,
+        rgba(97, 97, 97, 0.75) 100%
+    );
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.29) 38%,
+        rgba(97, 97, 97, 0.75) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#616161', GradientType=0 );
 }
 
 button {
@@ -62,7 +105,9 @@ header {
     font-size: 0.7em;
 }
 
-header > .nav {
+/* DESKTOP NAVIGATION */
+
+.nav-desktop {
     width: 90%;
     display: flex;
     justify-content: space-between;
@@ -70,11 +115,67 @@ header > .nav {
     margin: 1em;
 }
 
+/* MOBILE NAVIGATION */
+
+.nav-mobile {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-header {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-links {
+    width: 100%;
+    background-color: white;
+    border: 0;
+    border-radius: 4px;
+    display: none;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.mobile-links ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.mobile-links li {
+    padding: 8px;
+    margin: 6px;
+    font-size: 1.3em;
+}
+
+.mobile-links a {
+    color: hsl(228, 39%, 23%);
+}
+
+#header-logo {
+    height: 25px;
+}
+
 header > .main {
     background-color: transparent;
     width: inherit;
 }
 
-#header-logo {
-    height: 25px;
+@media screen and (max-width: 375px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex;
+    }
 }
