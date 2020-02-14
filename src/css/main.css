@@ -288,12 +288,14 @@ header {
 }
 
 #testemonials-card-wrapper {
+    width: 100vw;
+    overflow: scroll;
 }
 
 #testemonials-card-wrapper ul {
     height: 350px;
     width: 2540px;
-    overflow: scroll;
+
     padding: 10px;
     list-style: none;
 }
