@@ -19,6 +19,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 
 .no-scroll {
@@ -52,6 +53,10 @@ h2 {
     font-size: 2.5em;
     color: hsl(228, 39%, 23%);
     line-height: 1.3;
+}
+
+h2.white {
+    color: white;
 }
 
 h3 {
@@ -286,9 +291,15 @@ header {
 }
 
 #testemonials-card-wrapper ul {
-    list-style: none;
-    display: inline;
+    height: 350px;
+    width: 2540px;
+    overflow: scroll;
     padding: 10px;
+    list-style: none;
+}
+
+#testemonials-card-wrapper li {
+    display: inline-block;
 }
 
 .testemonial-card {
@@ -296,6 +307,7 @@ header {
     display: grid;
     grid-template-rows: 10% 10% 80%;
     grid-template-columns: 1fr;
+    margin: 10px;
 }
 
 .testemonial-card img {
@@ -317,6 +329,31 @@ header {
 .testimonial-body h3,
 p {
     text-align: center;
+}
+
+#add-wrapper {
+    width: 100vw;
+    background-color: hsl(12, 88%, 59%);
+    background-image: url("../assets/images/backgrounds/bg-simplify-section-desktop.svg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+#add {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+#add .statement {
+    width: 60%;
 }
 
 @media only screen and (max-width: 375px) {
@@ -399,5 +436,17 @@ p {
         display: flex;
         align-items: center;
         margin-left: 7px;
+    }
+
+    #add {
+        flex-direction: column;
+    }
+
+    #add .statement {
+        width: 100%;
+    }
+
+    #add h2 {
+        font-size: 2em;
     }
 }
